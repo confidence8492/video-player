@@ -98,6 +98,14 @@
         document.exitFullscreen();
       }
     }
+
+    // 添加空格鍵監聽器
+    document.addEventListener('keydown', (event) => {
+      if (event.key === ' ' || event.keyCode === 32) {
+        event.preventDefault(); // 防止空格鍵觸發其他行為（如滾動頁面）
+        playPause();
+      }
+    });
   </script>
 </body>
 </html>
